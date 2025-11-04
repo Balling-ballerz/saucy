@@ -11,6 +11,12 @@
 
 ---
 
+## 📱 Overview
+The **Sports Score Tracker App** provides users with **real-time sports scores** from popular leagues such as the **NBA**, **NFL**, and **MLB**.  
+The app displays scores in a **simple, scrollable list format**, allowing users to easily view team names, scores, and game statuses at a glance.
+
+---
+
 ## 🧩 App Evaluation
 
 | Attribute | Description |
