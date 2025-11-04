@@ -50,7 +50,3 @@ Users can view current game scores in a simple, easy-to-read **list format**, wi
 
 **Reason for Choice:**  
 I chose this app because it’s **useful, engaging, and easy to expand**. Sports fans love checking scores quickly, and presenting them in a clean list makes the app intuitive. Future features like notifications or team stats can enhance it further.
-
----
-
-### 📊 Total Points: **5 / 5**
