@@ -74,6 +74,9 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 ---
 
 ## 🧠 Wireframes
-*(Add your hand-drawn or digital wireframes here)*
+## Wireframes
+
+![Score Vision App Wireframe Layout](Score%20Vision%20App%20Wireframe%20Layout.png)
+
 
 Example structure:
