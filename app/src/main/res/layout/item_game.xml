@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="#1E1E1E"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- 1. GAME BANNER (Darkens the image slightly with an overlay tint if needed) -->
+        <ImageView
+            android:id="@+id/ivGameImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 2. HOME TEAM NAME -->
+        <!-- constrainedWidth="true" fixes the formatting issue where long names break layout -->
+        <TextView
+            android:id="@+id/tvHomeTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@id/tvStatus"
+            tools:text="Minnesota Timberwolves"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivGameImage" />
+
+        <!-- 3. AWAY TEAM NAME -->
+        <TextView
+            android:id="@+id/tvAwayTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/tvStatus"
+            tools:text="Golden State Warriors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivGameImage" />
+
+        <!-- 4. STATUS (Center - now in a subtle gray) -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#B3B3B3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            tools:text="FINAL"
+            app:layout_constraintStart_toEndOf="@id/tvHomeTeam"
+            app:layout_constraintEnd_toStartOf="@id/tvAwayTeam"
+            app:layout_constraintTop_toBottomOf="@id/ivGameImage" />
+
+        <!-- 5. HOME SCORE (Large & Gold/Accent Color) -->
+        <TextView
+            android:id="@+id/tvHomeScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFC107"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="102"
+            app:layout_constraintStart_toStartOf="@id/tvHomeTeam"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeTeam" />
+
+        <!-- 6. AWAY SCORE -->
+        <TextView
+            android:id="@+id/tvAwayScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFC107"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="98"
+            app:layout_constraintEnd_toEndOf="@id/tvAwayTeam"
+            app:layout_constraintTop_toBottomOf="@id/tvAwayTeam" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
