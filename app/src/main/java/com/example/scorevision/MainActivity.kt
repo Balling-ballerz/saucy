@@ -3,8 +3,10 @@ package com.example.scorevision
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
@@ -13,58 +15,93 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var rvGames: RecyclerView
     private lateinit var adapter: GamesAdapter
+    private lateinit var swipeContainer: SwipeRefreshLayout
     private var gamesList = mutableListOf<Game>()
 
-    // URL for the API (Using the free '3' key for NBA past events)
-    private val API_URL = "https://www.thesportsdb.com/api/v1/json/3/eventspastleague.php?id=4387"
+    // Define the 3 Endpoints (ESPN API)
+    private val NBA_URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+    private val NFL_URL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+    private val MLB_URL = "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
+
+    // Default to NBA
+    private var currentUrl = NBA_URL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 1. Find the RecyclerView
+        // Find Views
         rvGames = findViewById(R.id.rvGames)
+        swipeContainer = findViewById(R.id.swipeContainer)
+        val btnNBA = findViewById<Button>(R.id.btnNBA)
+        val btnNFL = findViewById<Button>(R.id.btnNFL)
+        val btnMLB = findViewById<Button>(R.id.btnMLB)
 
-        // 2. Create the Adapter with an empty list initially
+        // Setup Adapter
         adapter = GamesAdapter(gamesList)
-
-        // 3. Attach the Adapter to the RecyclerView
         rvGames.adapter = adapter
         rvGames.layoutManager = LinearLayoutManager(this)
 
-        // 4. Fetch the REAL data from the internet
+        // --- BUTTON LISTENERS ---
+        btnNBA.setOnClickListener {
+            currentUrl = NBA_URL
+            fetchGames()
+        }
+        btnNFL.setOnClickListener {
+            currentUrl = NFL_URL
+            fetchGames()
+        }
+        btnMLB.setOnClickListener {
+            currentUrl = MLB_URL
+            fetchGames()
+        }
+
+        // --- REFRESH LISTENER (The "Pull" Action) ---
+        swipeContainer.setOnRefreshListener {
+            Log.d("ScoreVision", "Refreshing...")
+            fetchGames()
+        }
+
+        // Optional: Make the spinner colorful
+        swipeContainer.setColorSchemeResources(
+            android.R.color.holo_blue_bright,
+            android.R.color.holo_green_light,
+            android.R.color.holo_orange_light,
+            android.R.color.holo_red_light
+        )
+
+        // Initial Load
         fetchGames()
     }
 
     private fun fetchGames() {
+        // Show spinner if it's not already showing (e.g. on button click)
+        swipeContainer.isRefreshing = true
+
         val client = AsyncHttpClient()
-        // Make a GET request to the API URL
-        client.get(API_URL, object : JsonHttpResponseHandler() {
+        client.get(currentUrl, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                Log.d("ScoreVision", "API Success: $json")
-
                 try {
-                    // 1. Get the "events" array from the JSON response
                     val eventsArray = json.jsonObject.getJSONArray("events")
-
-                    // 2. Convert that JSON into a list of Game objects
                     val newGames = Game.fromJsonArray(eventsArray)
 
-                    // 3. Clear the old list and add the new games
                     gamesList.clear()
                     gamesList.addAll(newGames)
-
-                    // 4. Tell the adapter the data changed so it updates the screen
                     adapter.notifyDataSetChanged()
 
+                    // STOP the spinner
+                    swipeContainer.isRefreshing = false
+
                 } catch (e: Exception) {
-                    Log.e("ScoreVision", "Error parsing JSON: $e")
+                    Log.e("ScoreVision", "Error: $e")
+                    swipeContainer.isRefreshing = false
                 }
             }
 
             override fun onFailure(statusCode: Int, headers: Headers?, response: String?, throwable: Throwable?) {
-                Log.e("ScoreVision", "API Failed. Status: $statusCode")
+                Log.e("ScoreVision", "API Failed")
+                swipeContainer.isRefreshing = false
             }
         })
     }
