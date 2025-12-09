@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="#1E1E1E"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- STATUS (Top Center, Small & Grey) -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Final"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- LEFT SIDE: HOME -->
+        <ImageView
+            android:id="@+id/ivHomeLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            tools:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvHomeScore"/>
+
+        <TextView
+            android:id="@+id/tvHomeTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="Lakers"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivHomeLogo"
+            app:layout_constraintStart_toStartOf="@id/ivHomeLogo"
+            app:layout_constraintEnd_toEndOf="@id/ivHomeLogo"/>
+
+        <!-- CENTER: SCORES -->
+        <TextView
+            android:id="@+id/tvHomeScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="102"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivHomeLogo"
+            app:layout_constraintTop_toTopOf="@id/ivHomeLogo"
+            app:layout_constraintEnd_toStartOf="@id/tvDash"/>
+
+        <TextView
+            android:id="@+id/tvDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="#555555"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHomeLogo"
+            app:layout_constraintTop_toTopOf="@id/ivHomeLogo"
+            app:layout_constraintStart_toEndOf="@id/ivHomeLogo"
+            app:layout_constraintEnd_toStartOf="@id/ivAwayLogo"/>
+
+        <TextView
+            android:id="@+id/tvAwayScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="98"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivAwayLogo"
+            app:layout_constraintTop_toTopOf="@id/ivAwayLogo"
+            app:layout_constraintStart_toEndOf="@id/tvDash"/>
+
+        <!-- RIGHT SIDE: AWAY -->
+        <ImageView
+            android:id="@+id/ivAwayLogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            tools:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAwayScore"/>
+
+        <TextView
+            android:id="@+id/tvAwayTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="Celtics"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivAwayLogo"
+            app:layout_constraintStart_toStartOf="@id/ivAwayLogo"
+            app:layout_constraintEnd_toEndOf="@id/ivAwayLogo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
