@@ -79,4 +79,39 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 ![Score Vision App Wireframe Layout](Score%20Vision%20App%20Wireframe%20Layout.png)
 
 
-Example structure:
+# Milestone 2 - Build Sprint 1 (Unit 8)
+
+## 📌 GitHub Project Board
+> *Add screenshot of your Project Board with three milestones visible.*
+
+## 📝 Issue Cards
+> *Add screenshot of the issues completed this sprint.*  
+> *Add screenshot of issues planned for next sprint with owners.*
+
+## ✔️ Issues Worked on This Sprint
+> *List the issues finished in this sprint.*
+
+## 📸 Build Progress
+> *Add a GIF showing your build progress for Milestone 2.*
+
+---
+
+# Milestone 3 - Build Sprint 2 (Unit 9)
+
+## 📌 GitHub Project Board
+> *Add screenshot showing updated issues for Milestone 3.*
+
+## ✔️ Completed User Stories
+> *List the user stories completed this unit.*
+
+## ⏳ Pending / Cut Stories
+> *List any incomplete or removed stories.*
+
+## 🎥 Build Progress Video/GIF
+> *Add video or GIF showing the current app build.*
+
+---
+
+# App Demo Video
+> *Embed YouTube/Vimeo link to your final Demo Day prep video.*
+
