@@ -93,7 +93,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 📌 GitHub Project Board
 
-![Project Board](*/image/M2board.png)
+![Project Board](M2board.png)
 
 ---
 
