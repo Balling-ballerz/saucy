@@ -99,7 +99,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 📝 Issue Cards
 
-![Issue Cards](image/issuecard.png)
+![Issue Cards](issuecard.png)
 
 ---
 
@@ -112,7 +112,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 📸 Build Progress
 
-![Build Progress](image/gif.mov)
+![Build Progress](gif.mov)
 
 ---
 
@@ -120,7 +120,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 📌 GitHub Project Board
 
-![Project Board](image/M3board.png)
+![Project Board](M3board.png)
 
 ---
 
@@ -140,7 +140,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 🎥 Build Progress Video / GIF
 
-![Build Progress](image/gif.mov)
+![Build Progress](gif.mov)
 
 ---
 
