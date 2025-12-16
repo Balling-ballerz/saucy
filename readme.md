@@ -102,8 +102,8 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 ![Project Board](image/M3board.png)
 
 ## ✔️ Completed User Stories
-> *Game details fragment*
-> *Display future games schedule*
+> *Game details fragment, *
+> *Display future games schedule, *
 > *Enhance UI Styling*
 
 ## ⏳ Pending / Cut Stories
