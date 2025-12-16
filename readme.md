@@ -82,7 +82,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 # Milestone 2 - Build Sprint 1 (Unit 8)
 
 ## 📌 GitHub Project Board
-> *Add screenshot of your Project Board with three milestones visible.*
+![Score Vision App Wireframe Layout](image/M2 Project Board.png)
 
 ## 📝 Issue Cards
 > *Add screenshot of the issues completed this sprint.*  
