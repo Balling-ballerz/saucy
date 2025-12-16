@@ -112,7 +112,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 
 ## 📸 Build Progress
 
-![Build Progress](https://imgur.com/a/2TdvACk)
+![Build Progress](https://imgur.com/a/2TdvACk.gif)
 
 ---
 
