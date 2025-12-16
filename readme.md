@@ -88,7 +88,7 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 ![Issue Cards](image/issuecard.png)
 
 ## ✔️ Issues Worked on This Sprint
-> *Game details fragment*
+> *Game details fragment, *
 > *League Filter System*
 
 ## 📸 Build Progress
@@ -99,16 +99,18 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 # Milestone 3 - Build Sprint 2 (Unit 9)
 
 ## 📌 GitHub Project Board
-> *Add screenshot showing updated issues for Milestone 3.*
+![Project Board](image/M3board.png)
 
 ## ✔️ Completed User Stories
-> *List the user stories completed this unit.*
+> *Game details fragment*
+> *Display future games schedule*
+> *Enhance UI Styling*
 
 ## ⏳ Pending / Cut Stories
-> *List any incomplete or removed stories.*
+> *Player stats integratiom*
 
 ## 🎥 Build Progress Video/GIF
-> *Add video or GIF showing the current app build.*
+![Build](image/gif.mov)
 
 ---
 
