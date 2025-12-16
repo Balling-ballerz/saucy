@@ -82,17 +82,17 @@ The app displays scores in a **simple, scrollable list format**, allowing users 
 # Milestone 2 - Build Sprint 1 (Unit 8)
 
 ## 📌 GitHub Project Board
-![Score Vision App Wireframe Layout](image/M2 Project Board.png)
+![Project Board](image/M2board.png)
 
 ## 📝 Issue Cards
-> *Add screenshot of the issues completed this sprint.*  
-> *Add screenshot of issues planned for next sprint with owners.*
+![Issue Cards](image/issuecard.png)
 
 ## ✔️ Issues Worked on This Sprint
-> *List the issues finished in this sprint.*
+> *Game details fragment*
+> *League Filter System*
 
 ## 📸 Build Progress
-> *Add a GIF showing your build progress for Milestone 2.*
+![Build](image/gif.mov)
 
 ---
 
